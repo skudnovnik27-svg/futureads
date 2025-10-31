@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FutureAds — рекламное агентство</title>
+  <meta name="description" content="FutureAds — современное рекламное агентство. Полиграфия, наружная реклама, сувениры, SMM и др." />
+  <style>
+    :root{
+      --bg: #ffffff;
+      --blue: #2EA3FF; /* основной голубой */
+      --purple: #7B61FF; /* акцентный фиолетовый */
+      --text: #111217;
+      --muted: #6b7280;
+      --card: rgba(46,163,255,0.06);
+      --glass: rgba(255,255,255,0.7);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+    header{display:flex;align-items:center;justify-content:space-between;padding:20px 28px;position:sticky;top:0;background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.6));backdrop-filter: blur(6px);border-bottom:1px solid #eef2f7;z-index:40}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo img{width:64px;height:64px;object-fit:contain}
+    .brand{font-weight:700;font-size:20px}
+    nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-weight:600}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--blue),var(--purple));color:white;font-weight:700;text-decoration:none}
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:center;padding:64px 6vw}
+    .hero-left{max-width:720px}
+    h1{font-size:44px;margin:0 0 12px;line-height:1.02}
+    p.lead{color:var(--muted);font-size:18px;margin:0 0 22px}
+    .ctas{display:flex;gap:12px;align-items:center}
+    .card-light{background:var(--card);padding:18px;border-radius:12px;display:flex;gap:12px;align-items:center}
+    .card-light img{width:64px;height:64px;object-fit:cover;border-radius:8px}
+    /* Form in hero */
+    .order-card{background:linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,0.95));border:1px solid rgba(124,97,255,0.12);padding:20px;border-radius:12px;box-shadow:0 6px 20px rgba(123,97,255,0.06)}
+    .order-card h3{margin:0 0 12px;font-size:18px}
+    .form-row{display:flex;gap:10px;margin-bottom:10px}
+    .form-row input, .form-row select, textarea{flex:1;padding:10px;border-radius:8px;border:1px solid #e6edf6;background:#fff}
+    textarea{min-height:90px;resize:vertical}
+    .small{font-size:13px;color:var(--muted)}
+    /* Sections */
+    .section{padding:56px 6vw}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service{background:linear-gradient(180deg, rgba(46,163,255,0.03), rgba(123,97,255,0.02));padding:18px;border-radius:10px;border:1px solid rgba(0,0,0,0.03)}
+    .service h4{margin:6px 0}
+    .about{display:flex;gap:22px;align-items:center}
+    .about .text{max-width:680px}
+    footer{background:linear-gradient(180deg, #f8fbff, #ffffff);padding:28px 6vw;border-top:1px solid #eef2f7}
+    .contacts{display:flex;gap:18px;align-items:center}
+    .social{display:flex;gap:12px}
+    /* Responsiveness */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;gap:20px;padding:36px 5vw}
+      .services{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      nav a{display:none}
+      .hero-left h1{font-size:30px}
+      .services{grid-template-columns:1fr}
+      .logo img{width:48px;height:48px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <!-- Логотип FutureAds -->
+      <img src="https://sun9-77.userapi.com/s/v1/ig2/84YJ7HTdvW-2p010IJpIrp_xoc1CzdcMwl5pm_YKC9a6Vih-Rm-DSI4qGE1xu4BXOTO-mN_xmk8b0dJX9zdujWBP.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1024x1024&from=bu&cs=1024x0" alt="Логотип FutureAds" />
+      <div>
+        <div class="brand">FutureAds</div>
+        <div class="small">Рекламное агентство</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#about">О компании</a>
+      <a href="#services">Услуги</a>
+      <a href="#contacts">Контакты</a>
+      <a class="btn" href="#order">Заказать</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Главная">
+      <div class="hero-left">
+        <h1>Будущее рекламы начинается сегодня.<br/><span style="color:var(--purple)">FutureAds</span> — мы вкладываем душу в каждый проект.</h1>
+        <p class="lead">Мы новая и современная компания будущего. Что нас отличает? Мы любим свою работу и вкладываем кусочек себя в каждый проект.</p>
+        <div class="ctas">
+          <a class="btn" href="#order">Отправить заявку</a>
+          <a class="btn" href="https://vk.com/club233445419?from=groups" target="_blank" rel="noopener">Группа ВКонтакте</a>
+        </div>
+        <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+          <div class="card-light">
+            <img src="https://picsum.photos/seed/print/96/96" alt="пример полиграфии">
+            <div>
+              <div style="font-weight:700">Полиграфия и сувениры</div>
+              <div class="small">Визитки, буклеты, кружки, футболки и многое другое</div>
+            </div>
+          </div>
+          <div class="card-light">
+            <img src="https://picsum.photos/seed/outdoor/96/96" alt="пример наружной рекламы">
+            <div>
+              <div style="font-weight:700">Наружная реклама</div>
+              <div class="small">Баннеры, вывески, оформление</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside id="order" class="order-card">
+        <h3>Быстрый предварительный заказ</h3>
+        <form id="leadForm">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Ваше имя" required />
+            <input type="tel" name="phone" placeholder="Телефон" required />
+          </div>
+          <div class="form-row">
+            <select name="service">
+              <option value="Полиграфия">Полиграфия</option>
+              <option value="Наружная реклама">Наружная реклама</option>
+              <option value="Сувениры">Сувениры</option>
+              <option value="Канцелярия">Канцелярия</option>
+              <option value="Шопперы">Шопперы</option>
+              <option value="SMM">SMM</option>
+            </select>
+            <input type="email" name="email" placeholder="Email (не обязательно)" />
+          </div>
+          <div style="margin-bottom:10px">
+            <textarea name="message" placeholder="Коротко о заказе (размеры, тираж, сроки)"></textarea>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;margin-bottom:10px">
+            <label style="display:flex;gap:6px;align-items:center"><input type="radio" name="type" value="order" checked /> Предзаказ</label>
+            <label style="display:flex;gap:6px;align-items:center"><input type="radio" name="type" value="call" /> Заказать звонок</label>
+          </div>
+          <div style="display:flex;gap:8px">
+            <button type="submit" class="btn">Отправить</button>
+            <button type="button" id="clearBtn" style="padding:10px;border-radius:8px;border:1px solid #e6edf6;background:#fff">Очистить</button>
+          </div>
+          <div id="result" class="small" style="margin-top:10px;color:var(--muted)"></div>
+        </form>
+      </aside>
+    </section>
+
+    <section id="about" class="section">
+      <div class="about">
+        <div class="text">
+          <h2>О команде FutureAds</h2>
+          <p class="small">Мы новая и современная компания будущего. Что нас отличает от других рекламных агентств? Пожалуй, все как у всех. Есть услуги стандартные для компаний и индивидуальные в единичном экземпляре. Гибкая ценовая политика, сроки, доставка, разные бонусы для наших клиентов, но все же, есть кое-что, чем мы выделяемся. Мы всей душой болеем за рекламное дело! В каждый проект мы вкладываем кусочек себя и своей любви. Потому что <strong>МЫ ЛЮБИМ СВОЮ РАБОТУ!</strong></p>
+          <ul>
+            <li>Гибкая ценовая политика</li>
+            <li>Индивидуальный подход к каждому заказу</li>
+            <li>Сжатые сроки и качественный контроль</li>
+          </ul>
+        </div>
+        <div style="flex:1">
+          <img src="https://picsum.photos/seed/team/680/420" alt="команда FutureAds" style="width:100%;border-radius:12px;object-fit:cover" />
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <h2>Наши услуги</h2>
+      <div class="services" style="margin-top:18px">
+        <div class="service">
+          <h4>Полиграфия</h4>
+          <p class="small">Визитки, буклеты, открытки, проспекты, листовки, флаеры — от дизайна до печати.</p>
+        </div>
+        <div class="service">
+          <h4>Наружная реклама</h4>
+          <p class="small">Баннеры, световые вывески, оформление фасадов и витрин.</p>
+        </div>
+        <div class="service">
+          <h4>Сувенирная продукция</h4>
+          <p class="small">Кружки, ежедневники, футболки, ручки, флешки, зарядные устройства и др.</p>
+        </div>
+        <div class="service">
+          <h4>Канцелярия</h4>
+          <p class="small">Тетради, ручки, блокноты, стикеры — брендирование под заказ.</p>
+        </div>
+        <div class="service">
+          <h4>Шопперы</h4>
+          <p class="small">Производство шопперов по индивидуальному заказу и оптом.</p>
+        </div>
+        <div class="service">
+          <h4>SMM и оформление соцсетей</h4>
+          <p class="small">Ведение страниц, оформление, креативы и таргетированная реклама.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="section">
+      <h2>Контактная информация</h2>
+      <div style="display:flex;gap:18px;align-items:flex-start;margin-top:18px;flex-wrap:wrap">
+        <div style="min-width:260px">
+          <p style="margin:6px 0"><strong>Адрес:</strong><br/>Г. Пермь, ул. Ленина</p>
+          <p style="margin:6px 0"><strong>Тел.:</strong><br/>(342) 213-45-67</p>
+          <p style="margin:6px 0"><strong>Email:</strong><br/>futureads@mail.ru</p>
+        </div>
+        <div style="flex:1;min-width:300px">
+          <h4>Напишите нам</h4>
+          <form id="contactForm">
+            <div class="form-row">
+              <input name="cname" placeholder="Имя" required />
+              <input name="cphone" placeholder="Телефон" required />
+            </div>
+            <div style="margin-bottom:10px"><input name="cemail" placeholder="Email" /></div>
+            <div style="margin-bottom:10px"><textarea name="cmessage" placeholder="Сообщение" required></textarea></div>
+            <div style="display:flex;gap:8px"><button type="submit" class="btn">Отправить</button>
+            <a href="https://vk.com/club233445419?from=groups" target="_blank" class="small" style="margin-left:10px">Группа ВКонтакте</a></div>
+            <div id="contactResult" class="small" style="margin-top:10px;color:var(--muted)"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap">
+      <div>
+        <div style="font-weight:700">FutureAds</div>
+        <div class="small">Рекламное агентство — Полиграфия • Внешняя реклама • Сувениры • SMM</div>
+      </div>
+      <div class="contacts">
+        <div class="social">
+          <a href="https://vk.com/club233445419?from=groups" target="_blank" class="small">ВКонтакте</a>
+          <a href="#" class="small">Instagram</a>
+          <a href="#" class="small">Facebook</a>
+        </div>
+        <div class="small">© <span id="year"></span> FutureAds</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Form handling: simulate sending and produce mailto fallback
+    function formToMailto(form){
+      const data = new FormData(form);
+      const entries = Array.from(data.entries());
+      let subject = encodeURIComponent('Заявка с сайта FutureAds');
+      let body = entries.map(e=>encodeURIComponent(e[0]+': '+e[1])).join('%0D%0A');
+      return 'mailto:futureads@mail.ru?subject='+subject+'&body='+body;
+    }
+
+    const leadForm = document.getElementById('leadForm');
+    leadForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      const res = document.getElementById('result');
+      res.textContent = 'Заявка локально собрана — откроется почтовый клиент для отправки. Если почтовый клиент не открылся, скопируйте данные.';
+      window.location.href = formToMailto(leadForm);
+    });
+    document.getElementById('clearBtn').addEventListener('click', ()=>leadForm.reset());
+
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      const rr = document.getElementById('contactResult');
+      rr.textContent = 'Спасибо! Откроется почтовый клиент для отправки сообщения.';
+      window.location.href = formToMailto(contactForm);
+    });
+  </script>
+</body>
+</html>
